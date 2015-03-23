@@ -1,0 +1,44 @@
+<ion-view title="Dashboard" hide-back-button="true">
+
+  <ion-content class="padding">
+
+    <div class="list card" ng-repeat="item in tab1items">
+      <div class="item item-avatar dash-avatar">
+        <img ng-src="{{ item.userimg }}" ng-click="gotoSecondPage()">
+        <h2 style="font-size: 18px;"> 
+          {{ item.by }}
+          <span style="color:#ccc;"> shared </span>
+        </h2>
+        <p> {{ item.date }} </p>
+      </div>
+      <div class="item item-body" style="border-top: none; padding: 5px; padding-top: 0px;">
+        <p class="dash-post-title"> {{ item.title }} </p>
+        <img ng-src="{{ item.postimg }}" style="width: 100%;">
+        <p style="font-size: 14px !important; margin: 0px;">
+          {{ item.postdesc }}
+        </p>
+        <p>
+          <a class="subdued"> {{ item.likecount }} Like </a>
+          <a class="subdued"> {{ item.commentcount }} Comment </a>
+        </p>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left item-fresh-list">
+        <a class="tab-item" >
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item" >
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item" >
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+    </div>
+
+
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,74 @@
+<ion-view hide-nav-bar="true">
+
+    <ion-content  padding="true" style="background: url('img/bg1.png'); background-size: 100% 100%;">
+
+        <div class="row" id="signup">
+            <div class="col" style="margin-bottom: 0px; text-align: center;">
+                <img src="img/ionic.png" width="100px" ng-click="gotoSignIn()"/> 
+            </div>
+        </div>
+
+        <div class="row">  
+            <div class="col" style="margin-bottom: 0px;">
+                <div class="list list-inset input-box-list" style="padding-top: 0px;">
+                    <label class="item item-input input-box-label">
+                        <i class="icon ion-ios7-person-outline placeholder-icon" style="color: #fff !important;" ng-hide="alertstatus1==true"></i>
+                        <i class="icon ion-ios7-person-outline placeholder-icon" style="color: red !important;" ng-show="alertstatus1==true"></i>
+                        <input type="text" placeholder="username" class="fresh-text" ng-model="reg.username" ng-change="RegField('username')" />
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="margin-bottom: 0px;">
+                <div class="list list-inset input-box-list">
+                    <label class="item item-input input-box-label">
+                        <i class="icon ion-ios7-email-outline placeholder-icon" style="color: #fff !important; font-size: 24px !important;" ng-hide="alertstatus3==true"></i>
+                        <i class="icon ion-ios7-email-outline placeholder-icon" style="color: red !important; font-size: 24px !important;" ng-show="alertstatus3==true"></i>
+                        <input type="text" placeholder="email address" class="fresh-text" ng-model="reg.email" ng-change="RegField('email')" />
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="margin-bottom: 0px;">
+                <div class="list list-inset input-box-list">
+                    <label class="item item-input input-box-label">
+                        <i class="icon ion-ios7-locked-outline placeholder-icon" style="color: #fff !important;" ng-hide="alertstatus4==true"></i>
+                        <i class="icon ion-ios7-locked-outline placeholder-icon" style="color: red !important;" ng-show="alertstatus4==true"></i>
+                        <input type="password" placeholder="password" class="fresh-text" ng-model="reg.password" ng-change="RegField('password')" />
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="margin-bottom: 0px;">
+                <div class="list" >
+                    <label class="item item-input item-select input-box-list input-box-label" style="padding-left: 9px;" >
+                        <div class="input-label" style="padding-top: 10px;">
+                            <i class="icon ion-ios7-world-outline placeholder-icon" style="color: #fff !important; font-size: 23px !important;" ng-hide="alertstatus5==true"></i>
+                            <i class="icon ion-ios7-world-outline placeholder-icon" style="color: red !important; font-size: 23px !important;" ng-show="alertstatus5==true"></i>
+                        </div>
+                        <select class="input-box-label" style="background: none !important; font-size: 20px;" ng-model="reg.country" ng-change="RegField('country')">
+                            <option value="select" ng-selected="true">Select country</option>
+                            <option ng-repeat="item in countryitems" value="{{item.id}}"> {{ item.slug }} </option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="margin-bottom: 0px;">
+                <button class="button button-block sign-btns"  ng-click="signUp(reg)">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+    
+</ion-view>

@@ -1,0 +1,58 @@
+<ion-view hide-nav-bar="true">
+
+    <ion-content padding="true" style="background: url('img/bg1.png'); background-size: 100% 100%;">
+
+        <div class="row padding-top" style="padding-top: 20%;">
+            <div class="col" style="margin-bottom: 0px; text-align: center;">
+                <img src="img/ionic.png" width="100px" /> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="margin-bottom: 0px;">
+                <div class="list list-inset input-box-list" >
+                    <label class="item item-input input-box-label">
+                        <i class="icon ion-ios7-person-outline placeholder-icon" style="color: #fff !important;" ng-hide="alertstatus1==true"></i>
+                        <i class="icon ion-ios7-person-outline placeholder-icon" style="color: red !important;" ng-show="alertstatus1==true"></i>
+                        <input type="text" placeholder="username" class="fresh-text" ng-model="user.username" ng-change="LoginField('username')" />
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="margin-bottom: 0px;">
+                <div class="list list-inset input-box-list">
+                    <label class="item item-input input-box-label">
+                        <i class="icon ion-ios7-locked-outline placeholder-icon" style="color: #fff !important;" ng-hide="alertstatus2==true"></i>
+                        <i class="icon ion-ios7-locked-outline placeholder-icon" style="color: red !important;" ng-show="alertstatus2==true"></i>
+                        <input type="password" placeholder="password" class="fresh-text" ng-model="user.password" ng-change="LoginField('password')" /> 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="margin-bottom: 0px;">
+                <button class="button button-block sign-btns" ng-click="signIn(user)">
+                    Sign in
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="margin-bottom: 0px;">
+                <div class="row" style="color: #fff; padding: 0px;">
+                    <div class="col col-50">
+                        <input type="checkbox" id="remember_me_cb"> Remember
+                    </div>
+                    <div class="col col-50" align="right" ui-sref="signup">
+                        Sign Up
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+    
+</ion-view>
